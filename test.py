@@ -4,7 +4,7 @@ from tensorflow.keras.preprocessing import image
 import os
 
 # Load the model from the .h5 file
-model = tf.keras.models.load_model('C:\\Tensorflow\\models\\food101_mobilenet.h5')
+model = tf.keras.models.load_model('models\\food101_mobilenet.h5')
 
 # Alternatively, you can inspect the model summary to see its architecture
 model.summary()
@@ -47,7 +47,7 @@ def predict_image(img_path):
     return predicted_label
 
 # Directory containing the images to test
-test_images_dir = 'C:\\Tensorflow\\test_images'
+test_images_dir = 'test_images'
 
 # Iterate through the images in the test directory and make predictions
 for img_file in os.listdir(test_images_dir):
